@@ -1,4 +1,4 @@
-async function getProducts(){
+export default async function getProducts(){
     try{
         const response = await fetch("https://fakestoreapi.com/products")
         if(!response.ok){
