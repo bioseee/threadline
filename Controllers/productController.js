@@ -30,3 +30,23 @@ export default async function insertData(){
         console.log(data)
     
 }
+
+async function productController(req, res){
+    try{
+        const { data, error } = await supabase
+            .from('products')
+            .select()
+        if(error){
+            console.error(error)
+            throw new Error('Error getting products from database')
+        }
+        res.json(data)
+    }catch(err){
+        console.error('Internal server error: ', err)
+        res.status(500).json({
+            error: "Internal server error"
+        })
+    }
+}
+
+export {productController}

@@ -10,13 +10,13 @@ export default function Header(){
                 <ul>
                     <li>
                         <NavLink to="/" className={({isActive})=>{isActive ? "active" : null}}>shop</NavLink>
-                        <NavLink to={<About/>} className={({isActive})=>{isActive ? "active" : null}}>about</NavLink>
+                        <NavLink to="/about" className={({isActive})=>{isActive ? "active" : null}}>about</NavLink>
                     </li>
                 </ul> 
                  <ul>
                     <li>
                         <Link to="/">shop</Link>
-                        <Link to={<Cart/>}>cart</Link>
+                        <Link to="/cart">cart</Link>
                         <button>log in</button>
                     </li>
                 </ul>       
